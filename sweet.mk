@@ -14,6 +14,11 @@ $(call inherit-product, device/xiaomi/sweet/device.mk)
 # OTA updater.
 CUSTOM_BUILD_TYPE := Official
 
+# Inherit some common PixelExtended stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # Gapps build only.
 WITH_GMS := true
 
